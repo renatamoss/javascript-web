@@ -15,18 +15,18 @@
     <section class="content">
       <nav>
         <ul>
-          <li><img src="/images/home.svg" alt="Home" /> Home</li>
+          <li><img src="images/home.svg" alt="Home" /> Home</li>
           <li>
-            <img src="/images/notification.svg" alt="Notications" />
+            <img src="images/notification.svg" alt="Notications" />
             Notifications
           </li>
-          <li><img src="/images/message.svg" alt="Messages" /> Messages</li>
+          <li><img src="images/message.svg" alt="Messages" /> Messages</li>
         </ul>
       </nav>
-      <img src="/images/twitter.svg" alt="Logo Twitter" />
+      <img src="images/twitter.svg" alt="Logo Twitter" />
       <div class="side">
         <input placeholder="Search on Twitter" type="text" />
-        <img src="/images/avatar.png" alt="Avatar" />
+        <img src="images/avatar.png" alt="Avatar" />
         <button>Tweet</button>
       </div>
     </section>
@@ -46,22 +46,22 @@
         </li>
         <li>
           <span>Followers</span>
-          <strong>84</strong>
+          <strong id="followNumber">84</strong>
         </li>
         <li>
           <span>Favorites</span>
-          <strong>23</strong>
+          <strong id="favoritesNumber">23</strong>
         </li>
       </ul>
       <div class="actions">
-        <button>Follow</button>
-        <img src="/images/more.svg" alt="More" />
+        <button onclick="goFollow()">Follow</button>
+        <img src="images/more.svg" alt="More" />
       </div>
     </section>
   </nav>
   <section class="wrapper-content content">
     <aside class="profile">
-      <img src="images/avatar.png" alt="Avatar" class="avatar" />
+      <img src="./images/avatar.png" alt="Avatar" class="avatar" />
       <h1>Javascript web</h1>
       <span>@javascriptWeb</span>
       <p>
@@ -69,16 +69,16 @@
         ullamcorper odio.
       </p>
       <ul class="info-list">
-        <li><img src="/images/place.svg" alt="Place" />Cidade, País</li>
-        <li><img src="/images/link.svg" alt="Place" />site.com</li>
-        <li><img src="/images/clock.svg" alt="Place" />Apbril, 24</li>
-        <li><img src="/images/baby.svg" alt="Place" />Data de nascimento</li>
+        <li><img src="images/place.svg" alt="Place" />Cidade, País</li>
+        <li><img src="images/link.svg" alt="Place" />site.com</li>
+        <li><img src="images/clock.svg" alt="Place" />Apbril, 24</li>
+        <li><img src="images/baby.svg" alt="Place" />Data de nascimento</li>
       </ul>
       <div class="widget followers">
-        <strong><img src="/images/user.svg" alt="Followers" /> 73 followers that you know</strong>
+        <strong><img src="images/user.svg" alt="Followers" /> 73 followers that you know</strong>
       </div>
       <div class="widget images">
-        <strong><img src="/images/image.svg" alt="Images" /> 266 Photos and videos</strong>
+        <strong><img src="images/image.svg" alt="Images" /> 266 Photos and videos</strong>
       </div>
     </aside>
     <section class="timeline">
@@ -89,7 +89,7 @@
       </nav>
       <ul class="tweets">
         <li>
-          <img src="/images/avatar.png" alt="Avatar" />
+          <img src="images/avatar.png" alt="Avatar" />
           <div class="info">
             <strong>
               Javascript web
@@ -101,14 +101,14 @@
               text ever since the 1500
             </p>
             <div class="actions">
-              <a href=""><img src="/images/comments.svg" alt="Comments" />3</a>
-              <a href=""><img src="/images/refresh.svg" alt="Refresh" />4</a>
-              <a href=""><img src="/images/heart.svg" alt="Like" />5</a>
+              <a onclick="comments()"><img id="comments" src="images/comments.svg" alt="Comments" /><text id="contComments">3</text></a>
+              <a onclick="refresh()"><img id="refresh" src="images/refresh.svg" alt="Refresh" /><text id="contRefresh">4</text></a>
+              <a onclick="like()"><img id="like" src="images/heart.svg" alt="Like" /> <text id='likeNumbers'>5</text></a>
             </div>
           </div>
         </li>
         <li>
-          <img src="/images/avatar.png" alt="Avatar" />
+          <img src="images/avatar.png" alt="Avatar" />
           <div class="info">
             <strong>
               Javascript web
@@ -120,14 +120,14 @@
               text ever since the 1500
             </p>
             <div class="actions">
-              <a href=""><img src="/images/comments.svg" alt="Comments" />3</a>
-              <a href=""><img src="/images/refresh.svg" alt="Refresh" />4</a>
-              <a href=""><img src="/images/heart.svg" alt="Like" />5</a>
+              <a href=""><img src="images/comments.svg" alt="Comments" />3</a>
+              <a href=""><img src="images/refresh.svg" alt="Refresh" />4</a>
+              <a href=""><img src="images/heart.svg" alt="Like" />5</a>
             </div>
           </div>
         </li>
         <li>
-          <img src="/images/avatar.png" alt="Avatar" />
+          <img src="images/avatar.png" alt="Avatar" />
           <div class="info">
             <strong>
               Javascript web
@@ -139,9 +139,9 @@
               text ever since the 1500
             </p>
             <div class="actions">
-              <a href=""><img src="/images/comments.svg" alt="Comments" />3</a>
-              <a href=""><img src="/images/refresh.svg" alt="Refresh" />4</a>
-              <a href=""><img src="/images/heart.svg" alt="Like" />5</a>
+              <a href=""><img src="images/comments.svg" alt="Comments" />3</a>
+              <a href=""><img src="images/refresh.svg" alt="Refresh" />4</a>
+              <a href=""><img src="images/heart.svg" alt="Like" />5</a>
             </div>
           </div>
         </li>
@@ -155,21 +155,20 @@
           <a href="">View all</a>
         </div>
         <ul>
-          <li>
+          <li id="firstProfile">
             <section class="profile">
-              <img src="/images/avatar.png" alt="Avatar" />
+              <img src="images/avatar.png" alt="Avatar" />
               <div class="info">
                 <strong>Javascript Web
                   <span>@javascriptWeb</span>
                 </strong>
-                <button>Follow</button>
+                <button onclick="goFollow()">Follow</button>
               </div>
             </section>
-            <a href="">x</a>
           </li>
           <li>
             <section class="profile">
-              <img src="/images/avatar.png" alt="Avatar" />
+              <img src="images/avatar.png" alt="Avatar" />
               <div class="info">
                 <strong>Javascript Web
                   <span>@javascriptWeb</span>
@@ -177,11 +176,10 @@
                 <button>Follow</button>
               </div>
             </section>
-            <a href="">x</a>
           </li>
           <li>
             <section class="profile">
-              <img src="/images/avatar.png" alt="Avatar" />
+              <img src="images/avatar.png" alt="Avatar" />
               <div class="info">
                 <strong>Javascript Web
                   <span>@javascriptWeb</span>
@@ -189,7 +187,6 @@
                 <button>Follow</button>
               </div>
             </section>
-            <a href="">x</a>
           </li>
         </ul>
       </div>
@@ -197,6 +194,8 @@
       <div class="widget trends"></div>
     </aside>
   </section>
+
+  <script type="text/javascript" src="script.js"></script>
 </body>
 
 </html>

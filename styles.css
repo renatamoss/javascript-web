@@ -70,7 +70,7 @@ header#main-header div.side input {
   border: 1px solid #e6ecf0;
   border-radius: 16px;
   color: #667581;
-  background: #f5f8fa url("/images/search.svg") no-repeat right;
+  background: #f5f8fa url("images/search.svg") no-repeat right;
 }
 
 header#main-header div.side img {
@@ -104,7 +104,7 @@ section.banner {
 
   height: 380px;
   width: 100%;
-  background-image: url('/images/banner-bg.jpeg');
+  background-image: url('images/banner-bg.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
 }
